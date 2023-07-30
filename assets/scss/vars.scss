@@ -1,0 +1,22 @@
+$gray: rgba(#EAE9E6, 0.95);
+$gray2: #DFD9D1;
+$black: #282E2D;
+$black2: #1E1E1E;
+$white: #fff;
+$wheat: #D69675;
+
+
+$logo_scale: 1.5;
+
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 1px,
+  // Small screen / phone
+  sm: 480px,
+  // Medium screen / tablet
+  md: 1280px,
+  // Large screen / desktop
+  lg: 1600px,
+  // Extra large screen / wide desktop
+  xl: 1920px
+);

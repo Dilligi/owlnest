@@ -1,0 +1,15 @@
+.button {
+    text-transform: uppercase;
+    padding: 18px 57px;
+    border: 3px solid $wheat;
+    font-size: 16px;
+    line-height: 12px;
+    font-family: Geometria, sans-serif;
+    transition: 0.1s ease;
+    &:hover {
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+    &:active {
+        background-color: $wheat;
+    }
+}

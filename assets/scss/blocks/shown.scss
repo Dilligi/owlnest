@@ -1,0 +1,72 @@
+.slide_left {
+
+    transition: 1s ease;
+    transform: translateX(-100%);
+}
+
+.slide_right {
+
+    transition: 1s ease;
+    transform: translateX(100%);
+}
+
+.slide_top {
+    transition: 1s ease;
+    opacity: 0;
+    transform: translateY(-400px);
+}
+
+.slide_bottom {
+    transition: 1s ease;
+    opacity: 0;
+    transform: translateY(400px);
+}
+
+.fade_up {
+    transition: 1s ease;
+    opacity: 0;
+    transform: scale(0.7);
+}
+
+.hide {
+    transition: 0.5s ease;
+    opacity: 0;
+}
+
+.shown {
+
+    .hide {
+        opacity: 1;
+    }
+
+    .slide_left, .slide_right {
+        transform: translateX(0);
+    }
+
+    .slide_top, .slide_bottom {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .fade_up {
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+    &.faq {
+        @for $i from 1 through 4 {
+            .faq-block:nth-of-type(#{$i}) {
+                animation: faq_slide_by_steps_#{$i} 2s ease-out;
+            }
+        }
+    }
+
+    &.roadmap {
+        @for $i from 1 through 10 {
+            .roadmap-block:nth-of-type(#{$i}) {
+                animation: roadmap_fade_by_steps_#{$i} 2.5s ease-out;
+            }
+        }
+    }
+
+}

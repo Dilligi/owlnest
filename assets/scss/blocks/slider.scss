@@ -1,0 +1,46 @@
+.slick-slider {
+    margin: 0 -15px;
+    .slick-slide {
+        padding: 0 15px;
+    }
+}
+
+.slick-track {
+    height: 100%;
+}
+
+.slider-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    li:not(:last-of-type) {
+        margin-right: 10px;
+    }
+    
+    li {
+        background-color: rgba($color: #747474, $alpha: 0.95);
+        border-radius: 50%;
+        width: 4px;
+        height: 4px;
+        overflow: hidden;
+        transition: 0.3s ease;
+        cursor: pointer;
+        button {
+            border: none;
+            color: transparent;
+            padding: 0;
+            background-color: transparent;
+        }
+        &.slick-active {
+            background-color: #AEAEAE;
+        }
+
+    }
+}

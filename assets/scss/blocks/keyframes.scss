@@ -1,0 +1,38 @@
+@mixin slide_by_steps($pers, $i, $name) {
+    @keyframes #{$name}_slide_by_steps_#{$i} {
+        0% {
+            transform: translateX(-2000px);
+        }
+
+        #{$pers} {
+            transform: translateX(0);
+        }
+    }
+}
+
+@mixin fade_by_steps($pers, $prev_pers, $i, $name) {
+    @keyframes #{$name}_fade_by_steps_#{$i} {
+        0% {
+            transform: translateX(-400px);
+            opacity: 0;
+        }
+
+        #{$prev_pers} {
+            transform: translateX(-400px);
+            opacity: 0;
+        }
+
+        #{$pers} {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}
+
+@for $i from 1 through 4 {
+    @include slide_by_steps(($i * 18) + '%',  $i, faq);
+}
+
+@for $i from 1 through 10 {
+    @include fade_by_steps(($i * 10) + '%', (($i - 1) * 10) + '%', $i, roadmap);
+}
